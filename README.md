@@ -27,9 +27,9 @@ cd wish-everyone-become-pitonist
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [BottlePy](https://bottlepy.org/) - Python Web Framework
+* [Bootstrap](https://getbootstrap.com/) - Free and open-source CSS framework
+* [Minty theme](https://bootswatch.com/minty/) - Bootstrap theme that we used
 
 ## Versioning
 
