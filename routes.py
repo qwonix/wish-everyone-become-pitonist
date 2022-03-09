@@ -7,7 +7,7 @@ from datetime import datetime
 
 @route('/')
 @view('index')
-def home():
+def index():
     return dict(
         title='Главная',
         year=datetime.now().year,
