@@ -6,7 +6,6 @@ from bottle import route, view
 from datetime import datetime
 
 @route('/')
-@route('/home')
 @view('index')
 def home():
     """Renders the home page."""
