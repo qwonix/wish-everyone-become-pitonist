@@ -8,27 +8,31 @@ from datetime import datetime
 @route('/')
 @view('index')
 def home():
-    """Renders the home page."""
     return dict(
+        title='Главная',
+        year=datetime.now().year,
+    )
+
+@route('/forecast')
+@view('forecast')
+def forecast():
+    return dict(
+        title='Прогноз погоды',
         year=datetime.now().year
     )
 
-@route('/contact')
-@view('contact')
-def contact():
-    """Renders the contact page."""
+@route('/conditions')
+@view('conditions')
+def conditions():
     return dict(
-        title='Contact',
-        message='Your contact page.',
+        title='Погодные явления',
         year=datetime.now().year
     )
 
-@route('/about')
-@view('about')
-def about():
-    """Renders the about page."""
+@route('/instruments')
+@view('instruments')
+def instruments():
     return dict(
-        title='About',
-        message='Your application description page.',
+        title='Метеорология',
         year=datetime.now().year
     )
