@@ -11,11 +11,9 @@
 <div class="col-lg-8 mx-auto p-3 py-md-5">
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-            <!-- <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li> -->
-            <li class="nav-item"><a href="/" class="nav-link">На главную</a></li>
-            <li class="nav-item"><a href="/forecast" class="nav-link">Прогноз погоды</a></li>
-            <li class="nav-item"><a href="/conditions" class="nav-link">Погодные явления</a></li>
-            <li class="nav-item"><a href="/instruments" class="nav-link">Метеорология</a></li>
+            %for option in menu:
+                <li class="nav-item"><a href="{{ option.link }}" class="{{ option.class_name() }}">{{ option.name }}</a></li>
+            %end
         </ul>
     </header>
 

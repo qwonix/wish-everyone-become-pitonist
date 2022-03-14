@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title=title, year=year)
+% rebase('layout.tpl', title=title, menu=menu, year=year)
 
 <div class="jumbotron">
     <h1>Bottle</h1>
