@@ -24,9 +24,9 @@
         {{!base}}
     </main>
     <footer class="pt-5 my-5 text-muted border-top">
-        WeatherApp team &middot; &copy; {{ year }}<br>
+        WeatherApp Team &middot; &copy; {{ year }}<br>
         <i class="bi-github" role="img"></i>
-        <a style="margin: 2px" href="https://github.com/qwonix/wish-everyone-become-pitonist">Source code</a>
+        <a  style="margin: 2px; text-decoration: none " href="https://github.com/qwonix/wish-everyone-become-pitonist">Source code</a>
     </footer>
 </div>
 

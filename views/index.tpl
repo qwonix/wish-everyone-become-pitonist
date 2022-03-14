@@ -1,29 +1,33 @@
 % rebase('layout.tpl', title=title, menu=menu, year=year)
 
 <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold">Centered hero</h1>
+    <h1 class="display-5 fw-bold">Погода</h1>
     <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
-            most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-            extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p class="lead mb-4">В такую дивную погоду — в холодный дождь и грязный снег — становится вкуснее кофе, теплее кот и мягче плед.</p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Кажется, дождь начинается</h2>
         <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Bottle — это мощный, основанный на паттернах способ создания динамических веб-сайтов,
+            который обеспечивает чистое разделение проблем
+            и дает вам полный контроль над разметкой для приятной и гибкой разработки.
         </p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
+        <h2>Больше библиотек</h2>
+        <p>Bootstrap — это открытый и бесплатный HTML, CSS и JS фреймворк,
+            который используется веб-разработчиками
+            для быстрой вёрстки адаптивных дизайнов сайтов и веб-приложений language.
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <h2>Байкал – не только озеро</h2>
+        <p>российский процессор семейства Baikal, созданный российской бесфабричной компанией
+            Baikal Electronics с использованием двух 32-битных процессорных ядер
+            P5600 архитектуры MIPS32 Release 5 от компании Imagination Technologies
+        </p>
     </div>
 </div>
