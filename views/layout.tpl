@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }} - WeatherApp</title>
     <link href="/static/content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/content/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -12,7 +13,9 @@
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
             %for option in menu:
-                <li class="nav-item"><a href="{{ option.link }}" class="{{ option.class_name() }}">{{ option.name }}</a></li>
+            <li class="nav-item">
+                <a href="{{ option.link }}" class="{{ option.class_name() }}">{{ option.name }}</a>
+            </li>
             %end
         </ul>
     </header>
@@ -21,7 +24,9 @@
         {{!base}}
     </main>
     <footer class="pt-5 my-5 text-muted border-top">
-        WeatherApp team &middot; &copy; {{ year }}
+        WeatherApp team &middot; &copy; {{ year }}<br>
+        <i class="bi-github" role="img"></i>
+        <a style="margin: 2px" href="https://github.com/qwonix/wish-everyone-become-pitonist">Source code</a>
     </footer>
 </div>
 
