@@ -37,6 +37,23 @@ def menu(idx=None):
     return options
 
 
+# TODO: index
+
+# TODO: forecast
+
+class WeatherCondition:
+    name: str
+    description: str
+    image_link: str
+
+    def __init__(self, name: str, description: str, image_link: str):
+        self.name = name
+        self.description = description
+        self.image_link = image_link
+
+
+# TODO: instruments
+
 def base_page(extra: dict):
     return {**dict(
         year=datetime.now().year,
@@ -67,6 +84,33 @@ def conditions():
     return base_page(dict(
         title='Погодные явления',
         menu=menu(2),
+        weather_conditions=[
+            WeatherCondition(
+                'Снег',
+                'форма атмосферных осадков, состоящая из мелких кристаллов льда',
+                'https://i.imgur.com/OzK5hGp.png',
+            ),
+            WeatherCondition(
+                'Дождь',
+                'атмосферные осадки, выпадающие из облаков в виде капель жидкости',
+                'https://i.imgur.com/1LVyrKM.png',
+            ),
+            WeatherCondition(
+                'Град',
+                'вид ливневых осадков в виде частиц льда преимущественно округлой формы',
+                'https://i.imgur.com/WjQk3kB.png',
+            ),
+            WeatherCondition(
+                'Гроза',
+                'атмосферное явление, при котором возникают электрические разряды',
+                'https://i.imgur.com/CHUnsl8.png',
+            ),
+            WeatherCondition(
+                'Смерч',
+                'атмосферный вихрь, возникающий в грозовом облаке',
+                'https://i.imgur.com/GEMdGLR.png',
+            ),
+        ],
     ))
 
 
