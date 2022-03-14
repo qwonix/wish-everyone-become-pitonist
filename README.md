@@ -37,6 +37,8 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Александр В.** - *Initial work and weather conditions page* - [buff3r0verfl0w](https://github.com/buff3r0verfl0w)
-* **Роман К.** - *Index page and weather forecast page* - [qwonix](https://github.com/qwonix)
-* **Артем П.** - *Weather instruments page* - [Gauliux](https://github.com/Gauliux)
+| Author           | Work                                       | Username                                            |
+|------------------|--------------------------------------------|-----------------------------------------------------|
+| **Александр В.** | *Initial work and weather conditions page* | [buff3r0verfl0w](https://github.com/buff3r0verfl0w) |
+| **Роман К.**     | *Index page and weather forecast page*     | [qwonix](https://github.com/qwonix)                 |
+| **Артем П.**     | *Weather instruments page*                 | [Gauliux](https://github.com/Gauliux)               |
