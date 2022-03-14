@@ -53,7 +53,7 @@ def forecast():
     return dict(
         title='Прогноз погоды',
         menu=menu(1),
-        year=datetime.now().year
+        year=datetime.now().year,
     )
 
 
@@ -63,7 +63,7 @@ def conditions():
     return dict(
         title='Погодные явления',
         menu=menu(2),
-        year=datetime.now().year
+        year=datetime.now().year,
     )
 
 
@@ -73,5 +73,5 @@ def instruments():
     return dict(
         title='Метеорология',
         menu=menu(3),
-        year=datetime.now().year
+        year=datetime.now().year,
     )
