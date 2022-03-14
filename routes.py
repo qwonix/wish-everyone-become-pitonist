@@ -37,41 +37,43 @@ def menu(idx=None):
     return options
 
 
+def base_page(extra: dict):
+    return {**dict(
+        year=datetime.now().year,
+    ), **extra}
+
+
 @route('/')
 @view('index')
 def index():
-    return dict(
+    return base_page(dict(
         title='Главная',
         menu=menu(0),
-        year=datetime.now().year,
-    )
+    ))
 
 
 @route('/forecast')
 @view('forecast')
 def forecast():
-    return dict(
+    return base_page(dict(
         title='Прогноз погоды',
         menu=menu(1),
-        year=datetime.now().year,
-    )
+    ))
 
 
 @route('/conditions')
 @view('conditions')
 def conditions():
-    return dict(
+    return base_page(dict(
         title='Погодные явления',
         menu=menu(2),
-        year=datetime.now().year,
-    )
+    ))
 
 
 @route('/instruments')
 @view('instruments')
 def instruments():
-    return dict(
+    return base_page(dict(
         title='Метеорология',
         menu=menu(3),
-        year=datetime.now().year,
-    )
+    ))
