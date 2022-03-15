@@ -39,7 +39,19 @@ def menu(idx=None):
 
 # TODO: index
 
-# TODO: forecast
+class WeatherForecast:
+    title: str
+    description: str
+    image_link: str
+    date: str
+
+    def __init__(self, title: str, description: str, image_link: str, date: str):
+        self.title = title
+        self.description = description
+        self.image_link = image_link
+        self.date = date
+
+
 
 class WeatherCondition:
     name: str
@@ -75,6 +87,26 @@ def forecast():
     return base_page(dict(
         title='Прогноз погоды',
         menu=menu(1),
+        weather_forecast=[
+            WeatherForecast(
+                '+2',
+                'Облачно',
+                'https://i.imgur.com/7GTBjlM.png',
+                'Сегодня'
+            ),
+            WeatherForecast(
+                '+5',
+                'Ясно',
+                'https://i.imgur.com/t3XGTHL.png',
+                'Завтра'
+            ),
+            WeatherForecast(
+                '0',
+                'Дождь',
+                'https://i.imgur.com/9gufmFS.png',
+                'Послезавтра'
+            )
+        ],
     ))
 
 
