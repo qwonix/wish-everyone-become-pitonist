@@ -14,12 +14,13 @@
   </li>
 </ul>
 
+
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade" id="home">
     <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
 	
 	<p>
-	<img src="https://i.imgur.com/os8wyh5.gif" width="300" height="150"  alt="Иллюстрация" align="right" vspace="5" hspace="5">
+	<img src="https://i.imgur.com/os8wyh5.gif" width="200" height="40"  alt="Иллюстрация" align="right" vspace="5" hspace="5">
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
 	euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
 	ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
