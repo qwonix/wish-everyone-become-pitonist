@@ -1,39 +1,44 @@
 % rebase('layout.tpl', title=title, menu=menu, year=year)
 
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+	<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
 </div>
 <br>
 
 <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" data-bs-toggle="tab" href="#home"></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" data-bs-toggle="tab" href="#profile">Profile</a>
-  </li>
+	<li class="nav-item">
+		<a class="nav-link active" data-bs-toggle="tab" href="#home">Метеорология</a>
+	</li>
+
+	<li class="nav-item">
+		<a class="nav-link" data-bs-toggle="tab" href="#barometer">Барометр</a>
+	</li>
 </ul>
 
-
 <div id="myTabContent" class="tab-content">
-  <div class="tab-pane fade" id="home">
-    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-	
-	<p>
-	<img src="https://i.imgur.com/os8wyh5.gif" width="200" height="40"  alt="Иллюстрация" align="right" vspace="5" hspace="5">
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
-	euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
-	ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
-	ut aliquip ex ea commodo consequat.
-	</p> 
-	
-  </div>
-  <div class="tab-pane fade active show" id="profile">
-    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
-  </div>
+	<div class="tab-pane fade active show" id="home">
+		<p>
+		<img src="https://i.imgur.com/VevlBKd.jpeg" width="338" height="253"  alt="Рабочее место метеоролога" align="left" vspace="10" hspace="10">
+		Метеорология – наука о земной атмосфере, её строении, свойствах и происходящих в ней явлениях и процессах. Задачи современной метеорологии не ограничиваются объяснением физической сущности атмосферных процессов. Углубленное изучение физики атмосферы позволило выделить ряд самостоятельных наук (научных дисциплин), имеющих свои объекты изучения. К таким наукам относятся: прежде всего синоптическая метеорология, изучающая погоду и методы её предсказания; динамическая метеорология, изучающая теоретические вопросы физики атмосферы с широким использованием современного математического аппарата; климатология, изучающая средний режим погоды отдельных районов в зависимости от их географического положения и физико-географических особенностей. Процессы, происходящие в средних и высоких слоях атмосферы (от 1.5 км до нескольких десятков км) изучает аэрология. В последние годы, в связи с интенсивным развитием космонавтики, получила развитие аэрономия – наука, изучающая самые высокие слои атмосферы (более 100 км) с помощью метеорологических и геофизических ракет и искусственных спутников Земли. 
+		</p>
+		<p>В процессе практического использования метеорологических сведений выделялись и продолжают выделяться некоторые прикладные отрасли метеорологии. Важнейшие из них – сельскохозяйственная метеорология, авиационная метеорология, космическая метеорология, морская метеорология, медицинская метеорология и др. 
+		</p>
+		<p>Среди перечисленных выше дисциплин синоптическая метеорология занимает особое место. Знание причин возникновения различных атмосферных явлений, умение предсказывать эти явления, особенно стихийные, имеет большое практическое значение.
+		</p> 
+	</div>
+
+	<div class="tab-pane fade" id="barometer">
+		<p>
+		<img src="https://i.imgur.com/IfyfjDd.png" width="102" height="256" alt="Ртутный барометр" align="right" vspace="10" hspace="10">
+		Барометр – прибор, измеряющий показания давления воздуха на окружающие предметы, был изобретен в 17 веке выдающимся итальянским ученным Э. Торричелли. Первоначально выглядел как стеклянная трубка с отметками, внутри её наполняла ртуть. В момент проведения исследования столбик ртути находился на 760 мм, теперь этот показатель принято считать уровнем нормального давления, по которому судят, повышается давление или наоборот понижается. Прибор такого вида благодаря высокой степени точности и сейчас применяются на различных метеостанциях и в научных лабораториях.
+		</p>
+		
+		<p>Пара сообщающихся сосудов, внутри ртуть, верх одной стеклянной трубки, длиной примерно в 90 см, закрыт, там нет воздуха. В зависимости от изменений в давлении ртуть под воздействием воздуха поднимается либо опускается в стеклянной трубке, а небольшой поплавок показывает движение ртутной массы и останавливается на отметке, показывающей её уровень в миллиметрах. Норма – ртуть на отметке 760 мм рт. ст., показания выше этого значения – идет процесс повышения давления, ниже – понижения. Барометры такого типа практически не используются в обычном обиходе, ведь ртуть является опасным ядовитым веществом, конструкция барометра довольно громоздка и требует острожного отношения. Поэтому они широко применяются только в лабораторных условиях, на различных научных метеорологических станциях и в промышленности, там, где важная абсолютная точность передачи данных.
+		</p>
+	</div>
 </div>
 
 <br>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+	<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
 </div>
