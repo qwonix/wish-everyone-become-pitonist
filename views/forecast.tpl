@@ -3,6 +3,7 @@
 <div class="row justify-content-center container px-4 py-5" id="custom-cards">
     <h2 class="pb-2 border-bottom">Санкт-Петербург</h2>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-2 ">
+        <!-- Макет карточки с отображением прогноза погоды -->
         %for fore in weather_forecast:
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"

@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title=title, menu=menu, year=year)
 
+<!-- Заголовок сайта -->
 <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold">Погода</h1>
     <div class="col-lg-6 mx-auto">
@@ -8,6 +9,7 @@
     </div>
 </div>
 
+<!-- Колонки с текстом -->
 <div class="row">
     <div class="col-md-4">
         <h2>Кажется, дождь начинается</h2>

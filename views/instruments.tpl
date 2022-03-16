@@ -1,11 +1,13 @@
 % rebase('layout.tpl', title=title, menu=menu, year=year)
 
+<!-- Прогресс-бар -->
 <div class="progress">
     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
          aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
 </div>
 <br>
 
+<!-- Вкладки с метеорологическими инструментами -->
 <ul class="nav nav-tabs">
     <li class="nav-item">
         <a class="nav-link active" data-bs-toggle="tab" href="#home">Метеорология</a>
@@ -20,6 +22,7 @@
     </li>
 </ul>
 
+<!-- Контент вкладок с метеорологическими инструментами -->
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active show" id="home">
         <p>
@@ -98,6 +101,8 @@
 </div>
 
 <br>
+
+<!-- Прогресс-бар -->
 <div class="progress">
     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
          aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
