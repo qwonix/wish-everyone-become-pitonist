@@ -37,8 +37,6 @@ def menu(idx=None):
     return options
 
 
-# TODO: index
-
 class WeatherForecast:
     title: str
     description: str
@@ -52,7 +50,6 @@ class WeatherForecast:
         self.date = date
 
 
-
 class WeatherCondition:
     name: str
     description: str
@@ -63,8 +60,6 @@ class WeatherCondition:
         self.description = description
         self.image_link = image_link
 
-
-# TODO: instruments
 
 def base_page(extra: dict):
     return {**dict(
