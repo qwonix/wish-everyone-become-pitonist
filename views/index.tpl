@@ -33,4 +33,19 @@
             P5600 архитектуры MIPS32 Release 5 от компании Imagination Technologies
         </p>
     </div>
+    <div class="col-md-4">
+        <h2>Ask a Question</h2>
+        <form action="/home" method="post">
+            <fieldset class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Your email</label>
+                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="Enter email" name="email">
+
+                <label for="exampleTextarea" class="form-label mt-4">Your question</label>
+                <textarea class="form-control" id="exampleTextarea" rows="2" name="question"></textarea>
+            </fieldset>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </div>
