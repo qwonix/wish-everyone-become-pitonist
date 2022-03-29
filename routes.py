@@ -2,8 +2,9 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view
+from bottle import route, view, post, request
 from datetime import datetime
+import myform
 
 
 class MenuOption:
@@ -24,20 +25,17 @@ class MenuOption:
 
 
 def menu(idx=None):
-    options = [
-        MenuOption('На главную', '/'),
-        MenuOption('Прогноз погоды', '/forecast'),
-        MenuOption('Погодные явления', '/conditions'),
-        MenuOption('Метеорология', '/instruments'),
-    ]
+    options = [MenuOption('На главную', '/'),
+               MenuOption('Прогноз погоды', '/forecast'),
+               MenuOption('Погодные явления', '/conditions'),
+               MenuOption('Метеорология', '/instruments'),
+               MenuOption('Форма', '/form'), ]
 
     if idx is not None:
         options[idx].is_active = True
 
     return options
 
-
-# TODO: index
 
 class WeatherForecast:
     title: str
@@ -52,7 +50,6 @@ class WeatherForecast:
         self.date = date
 
 
-
 class WeatherCondition:
     name: str
     description: str
@@ -64,97 +61,70 @@ class WeatherCondition:
         self.image_link = image_link
 
 
-# TODO: instruments
-
 def base_page(extra: dict):
-    return {**dict(
-        year=datetime.now().year,
-    ), **extra}
+    return {**dict(year=datetime.now().year, ), **extra}
+
+
+@route('/form')
+@view('form')
+def index():
+    return base_page(dict(title='Форма',
+                          menu=menu(4), ))
 
 
 @route('/')
 @view('index')
 def index():
-    return base_page(dict(
-        title='Главная',
-        menu=menu(0),
-    ))
+    return base_page(dict(title='Главная',
+                          menu=menu(0), ))
 
 
 @route('/forecast')
 @view('forecast')
 def forecast():
-    return base_page(dict(
-        title='Прогноз погоды',
-        menu=menu(1),
-        weather_forecast=[
-            WeatherForecast(
-                '+2',
-                'Облачно',
-                'https://i.imgur.com/7GTBjlM.png',
-                'Сегодня'
-            ),
-            WeatherForecast(
-                '+5',
-                'Ясно',
-                'https://i.imgur.com/t3XGTHL.png',
-                'Завтра'
-            ),
-            WeatherForecast(
-                '0',
-                'Дождь',
-                'https://i.imgur.com/9gufmFS.png',
-                'Послезавтра'
-            )
-        ],
-    ))
+    return base_page(dict(title='Прогноз погоды',
+                          menu=menu(1),
+                          weather_forecast=[WeatherForecast('+2',
+                                                            'Облачно',
+                                                            'https://i.imgur.com/7GTBjlM.png',
+                                                            'Сегодня'),
+                                            WeatherForecast('+5',
+                                                            'Ясно',
+                                                            'https://i.imgur.com/t3XGTHL.png',
+                                                            'Завтра'),
+                                            WeatherForecast('0',
+                                                            'Дождь',
+                                                            'https://i.imgur.com/9gufmFS.png',
+                                                            'Послезавтра')], ))
 
 
 @route('/conditions')
 @view('conditions')
 def conditions():
-    return base_page(dict(
-        title='Погодные явления',
-        menu=menu(2),
-        weather_conditions=[
-            WeatherCondition(
-                'Снег',
-                'форма атмосферных осадков, состоящая из мелких кристаллов льда',
-                'https://i.imgur.com/OzK5hGp.png',
-            ),
-            WeatherCondition(
-                'Дождь',
-                'атмосферные осадки, выпадающие из облаков в виде капель жидкости',
-                'https://i.imgur.com/1LVyrKM.png',
-            ),
-            WeatherCondition(
-                'Град',
-                'вид ливневых осадков в виде частиц льда преимущественно округлой формы',
-                'https://i.imgur.com/WjQk3kB.png',
-            ),
-            WeatherCondition(
-                'Гроза',
-                'атмосферное явление, при котором возникают электрические разряды',
-                'https://i.imgur.com/CHUnsl8.png',
-            ),
-            WeatherCondition(
-                'Смерч',
-                'атмосферный вихрь, возникающий в грозовом облаке',
-                'https://i.imgur.com/GEMdGLR.png',
-            ),
-            WeatherCondition(
-                'Туман',
-                'мельчайшие капли воды, которые конденсируются в холодном воздухе из водяного пара',
-                'https://i.imgur.com/Whwp7Y9.png',
-            ),
-        ],
-    ))
+    return base_page(dict(title='Погодные явления',
+                          menu=menu(2),
+                          weather_conditions=[WeatherCondition('Снег',
+                                                               'форма атмосферных осадков, состоящая из мелких кристаллов льда',
+                                                               'https://i.imgur.com/OzK5hGp.png', ),
+                                              WeatherCondition('Дождь',
+                                                               'атмосферные осадки, выпадающие из облаков в виде капель жидкости',
+                                                               'https://i.imgur.com/1LVyrKM.png', ),
+                                              WeatherCondition('Град',
+                                                               'вид ливневых осадков в виде частиц льда преимущественно округлой формы',
+                                                               'https://i.imgur.com/WjQk3kB.png', ),
+                                              WeatherCondition('Гроза',
+                                                               'атмосферное явление, при котором возникают электрические разряды',
+                                                               'https://i.imgur.com/CHUnsl8.png', ),
+                                              WeatherCondition('Смерч',
+                                                               'атмосферный вихрь, возникающий в грозовом облаке',
+                                                               'https://i.imgur.com/GEMdGLR.png', ),
+                                              WeatherCondition('Туман',
+                                                               'атмосферное явление, скопление воды в воздухе',
+                                                               'https://i.imgur.com/7F9HA77.png', ), ], ))
 
 
 @route('/instruments')
 @view('instruments')
 def instruments():
-    return base_page(dict(
-        title='Метеорология',
-        menu=menu(3),
-    ))
+    return base_page(dict(title='Метеорология',
+                          menu=menu(3), ))
