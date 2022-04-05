@@ -1,5 +1,8 @@
 from bottle import post, request
 from re import compile as regex_compile
+from os.path import dirname
+from config import Config
+import pdb
 
 
 @post('/home', method='post')
@@ -18,4 +21,8 @@ def my_form():
     if error != "":
         return f"Ошибка: {error}"
     else:
+        pdb.set_trace()
+        config = Config(dirname(__file__), "questions.json")
+        config.set(email, question)
+        config.save()
         return f"Thanks! The answer will be sent to the mail {email}"
