@@ -23,6 +23,11 @@ def my_form():
     else:
         pdb.set_trace()
         config = Config(dirname(__file__), "questions.json")
-        config.set(email, question)
+        if config.exists(email):
+            questions = config.try_get(email)
+            questions.append(question)
+            config.set(email, questions)
+        else:
+            config.set(email, [question])
         config.save()
         return f"Thanks! The answer will be sent to the mail {email}"
