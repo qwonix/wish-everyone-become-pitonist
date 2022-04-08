@@ -19,6 +19,9 @@
     <Name>WeatherApp</Name>
     <RootNamespace>WeatherApp</RootNamespace>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +37,9 @@
     <Compile Include="myform.py" />
     <Compile Include="phone_re.py" />
     <Compile Include="routes.py" />
+    <Compile Include="test_email.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -43,6 +49,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PythonSettings.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\css\bootstrap-icons.min.css" />
     <Content Include="static\css\bootstrap.min.css" />

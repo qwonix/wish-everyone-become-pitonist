@@ -364,4 +364,4 @@ FodyWeavers.xsd
 
 # PyCharm
 .idea
-*.json
+questions.json
