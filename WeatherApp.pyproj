@@ -30,42 +30,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="config.py" />
+    <Compile Include="myform.py" />
+    <Compile Include="phone_re.py" />
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
-    <Folder Include="static\content\" />
+    <Folder Include="static\css\" />
     <Folder Include="static\fonts\" />
-    <Folder Include="static\scripts\" />
+    <Folder Include="static\js\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="static\content\bootstrap.css" />
-    <Content Include="static\content\bootstrap.min.css" />
-    <Content Include="static\content\site.css" />
-    <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="static\scripts\bootstrap.js" />
-    <Content Include="static\scripts\bootstrap.min.js" />
-    <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="static\scripts\jquery-1.10.2.js" />
-    <Content Include="static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="static\scripts\jquery.validate.js" />
-    <Content Include="static\scripts\jquery.validate.min.js" />
-    <Content Include="static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="static\scripts\modernizr-2.6.2.js" />
-    <Content Include="static\scripts\respond.js" />
-    <Content Include="static\scripts\respond.min.js" />
-    <Content Include="static\scripts\_references.js" />
-    <Content Include="views\about.tpl" />
-    <Content Include="views\contact.tpl" />
+    <Content Include="static\css\bootstrap-icons.min.css" />
+    <Content Include="static\css\bootstrap.min.css" />
+    <Content Include="static\fonts\bootstrap-icons.woff" />
+    <Content Include="static\fonts\bootstrap-icons.woff2" />
+    <Content Include="static\js\bootstrap.bundle.min.js" />
+    <Content Include="views\conditions.tpl" />
+    <Content Include="views\forecast.tpl" />
     <Content Include="views\index.tpl" />
+    <Content Include="views\instruments.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
