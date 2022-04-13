@@ -2,7 +2,7 @@ from bottle import post, request
 from re import compile as regex_compile
 from os.path import dirname
 from config import Config
-import pdb
+# import pdb
 
 
 @post('/home', method='post')
@@ -21,7 +21,7 @@ def my_form():
     if error != "":
         return f"Ошибка: {error}"
     else:
-        pdb.set_trace()
+        # pdb.set_trace()
         config = Config(dirname(__file__), "questions.json")
         if config.exists(email):
             questions = config.try_get(email)
