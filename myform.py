@@ -4,16 +4,18 @@ from os.path import dirname
 from config import Config
 # import pdb
 
+def is_valid_email(email: str) -> bool:
+    email_pattern = regex_compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
+    return bool(email_pattern.match(email))
 
 @post('/home', method='post')
 def my_form():
     email = request.forms.get('email')
     question = request.forms.get('question')
 
-    pattern = regex_compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
     error = ""
 
-    if not pattern.match(email):
+    if not is_valid_email(email):
         error = "email не соответствует шаблону"
     elif question == "":
         error = "введите ваш вопрос"
