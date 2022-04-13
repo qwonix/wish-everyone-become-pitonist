@@ -37,7 +37,10 @@
     <Compile Include="myform.py" />
     <Compile Include="phone_re.py" />
     <Compile Include="routes.py" />
-    <Compile Include="test_email.py">
+    <Compile Include="test_valid_email.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_invalid_email.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
