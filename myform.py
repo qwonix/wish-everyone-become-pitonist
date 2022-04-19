@@ -5,15 +5,19 @@ from re import compile as regex_compile
 import pdb
 import json
 
+def isCorrectMail(email: str):
+   pattern = regex_compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+   if pattern.match(email):
+      return True
+   else:
+      return False
 
 @post('/form', method='post')
 def my_form():
     email = request.forms.get('email')
     question = request.forms.get('question')
 
-    pattern = regex_compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
-
-    if not pattern.match(email):
+    if not isCorrectMail(email):
         return f"Ошибка: email не соответствует шаблону"
     elif question == "":
         return f"Ошибка: введите ваш вопрос"
