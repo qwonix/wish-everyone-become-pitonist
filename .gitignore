@@ -365,3 +365,4 @@ FodyWeavers.xsd
 # PyCharm
 .idea
 questions.json
+actual_novelties.json

@@ -7,6 +7,7 @@
     <!-- Подключение bootstrap minty theme и иконок -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/toastr.min.css">
 </head>
 <body>
 
@@ -38,6 +39,9 @@
 
 <!-- Подключение bootstrap bundle -->
 <script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/toastr.min.js"></script>
+<script src="/static/js/checker.js"></script>
 
 </body>
 </html>

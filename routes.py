@@ -5,6 +5,8 @@ Routes and views for the bottle application.
 from bottle import route, view
 from datetime import datetime
 import myform
+from os.path import dirname
+import config2 as cfg2
 
 
 class MenuOption:
@@ -30,6 +32,7 @@ def menu(idx=None):
         MenuOption('Прогноз погоды', '/forecast'),
         MenuOption('Погодные явления', '/conditions'),
         MenuOption('Метеорология', '/instruments'),
+        MenuOption('Актуальные новинки', '/novelties'),
     ]
 
     if idx is not None:
@@ -153,4 +156,46 @@ def instruments():
     return base_page(dict(
         title='Метеорология',
         menu=menu(3),
+    ))
+
+
+class Noveltie:
+    title: str
+    description: str
+    nickname: str
+    email: str
+    date: str = ''
+
+    def __init__(self, title: str, description: str, nickname: str, email: str, date: str):
+        self.title = title
+        self.description = description
+        self.nickname = nickname
+        self.email = email
+        self.date = date
+
+    def to_dict(self):
+        return {
+            'title': self.title,
+            'description': self.description,
+            'nickname': self.nickname,
+            'email': self.email,
+            'date': self.date,
+        }
+
+    @staticmethod
+    def from_dict(d: dict):
+        return Noveltie(d['title'], d['description'], d['nickname'], d['email'], d['date'])
+
+
+@route('/novelties')
+@view('novelties')
+def novelties():
+    config = cfg2.Config(dirname(__file__), "actual_novelties.json")
+    novelties = []
+    for d in config.data:
+        novelties.append(Noveltie.from_dict(d))
+    return base_page(dict(
+        title='Актуальные новинки',
+        menu=menu(4),
+        actual_novelties=novelties,
     ))
