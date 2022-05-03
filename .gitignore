@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 # PyCharm
 .idea
+/WeatherApp1.pyperf
+/WeatherApp.pyperf

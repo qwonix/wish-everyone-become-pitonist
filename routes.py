@@ -2,9 +2,8 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view, post, request
+from bottle import route, view, post, request, template
 from datetime import datetime
-import myform
 
 
 class MenuOption:
@@ -29,7 +28,8 @@ def menu(idx=None):
                MenuOption('Прогноз погоды', '/forecast'),
                MenuOption('Погодные явления', '/conditions'),
                MenuOption('Метеорология', '/instruments'),
-               MenuOption('Форма', '/form'), ]
+               MenuOption('Форма', '/form'),
+               MenuOption('Комментарии', '/comments')]
 
     if idx is not None:
         options[idx].is_active = True
@@ -63,13 +63,6 @@ class WeatherCondition:
 
 def base_page(extra: dict):
     return {**dict(year=datetime.now().year, ), **extra}
-
-
-@route('/form')
-@view('form')
-def index():
-    return base_page(dict(title='Форма',
-                          menu=menu(4), ))
 
 
 @route('/')
