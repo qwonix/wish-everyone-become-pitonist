@@ -3,16 +3,20 @@ toastr.options = {
     preventDuplicates: true
 };
 
+function count_of_vals(number, format) {
+    return number + ' ' + format[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][Math.min(number % 10, 5)]];
+}
+
 $('#exampleInputNickname1').bind('input propertychange', function () {
-    $('#labelExampleInputNickname1').text('Никнейм (' + this.value.length + ' символов)')
+    $('#labelExampleInputNickname1').text('Никнейм (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
 });
 
 $('#exampleInputTitle1').bind('input propertychange', function () {
-    $('#labelExampleInputTitle1').text('Заголовок (' + this.value.length + ' символов)')
+    $('#labelExampleInputTitle1').text('Заголовок (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
 });
 
 $('#exampleTextarea').bind('input propertychange', function () {
-    $('#labelExampleTextarea').text('Ваш текст (' + this.value.length + ' символов)')
+    $('#labelExampleTextarea').text('Ваш текст (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
 });
 
 function validate_all() {
