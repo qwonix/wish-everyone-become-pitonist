@@ -19,6 +19,7 @@ $('#exampleTextarea').bind('input propertychange', function () {
     $('#labelExampleTextarea').text('Ваш текст (' + count_of_vals(this.value.length, 1000, ['символ', 'символа', 'символов']) + ')')
 });
 
+// проверка данных формы
 function validate_all() {
     let email = $("#exampleInputEmail1").val();
     let nickname = $("#exampleInputNickname1").val();
