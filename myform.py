@@ -66,7 +66,7 @@ def validate_all(email, nickname, title, description):
     if not is_valid_email(email):
         error = "email не соответствует шаблону"
     elif not is_valid_nickname(nickname):
-        error = "nickname должен состоять только из латинских символов/цифр и быть не длинее 16 символов"
+        error = "никнейм должен состоять только из латинских символов/цифр и быть не длинее 16 символов"
     elif not is_valid_title(title):
         error = "некорректный заголовок"
     elif not is_valid_description(description):
