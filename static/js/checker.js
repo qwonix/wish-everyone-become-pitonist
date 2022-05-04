@@ -3,20 +3,20 @@ toastr.options = {
     preventDuplicates: true
 };
 
-function count_of_vals(number, format) {
-    return number + ' ' + format[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][Math.min(number % 10, 5)]];
+function count_of_vals(number, max_chars, format) {
+    return number + ' / ' + max_chars + ' ' + format[(max_chars % 100 > 4 && max_chars % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][Math.min(max_chars % 10, 5)]];
 }
 
 $('#exampleInputNickname1').bind('input propertychange', function () {
-    $('#labelExampleInputNickname1').text('Никнейм (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
+    $('#labelExampleInputNickname1').text('Никнейм (' + count_of_vals(this.value.length, 16, ['символ', 'символа', 'символов']) + ' )')
 });
 
 $('#exampleInputTitle1').bind('input propertychange', function () {
-    $('#labelExampleInputTitle1').text('Заголовок (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
+    $('#labelExampleInputTitle1').text('Заголовок (' + count_of_vals(this.value.length, 100, ['символ', 'символа', 'символов']) + ')')
 });
 
 $('#exampleTextarea').bind('input propertychange', function () {
-    $('#labelExampleTextarea').text('Ваш текст (' + count_of_vals(this.value.length, ['символ', 'символа', 'символов']) + ')')
+    $('#labelExampleTextarea').text('Ваш текст (' + count_of_vals(this.value.length, 1000, ['символ', 'символа', 'символов']) + ')')
 });
 
 function validate_all() {
