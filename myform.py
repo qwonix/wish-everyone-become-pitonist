@@ -17,7 +17,7 @@ def is_valid_email(email: str) -> bool:
 
 # функция для проверки заголовка
 def is_valid_title(title: str) -> bool:
-    return title != "" and len(title) <= 40
+    return title != "" and len(title) <= 100
 
 
 # функция для проверки описания
