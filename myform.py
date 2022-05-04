@@ -17,12 +17,12 @@ def is_valid_email(email: str) -> bool:
 
 # функция для проверки заголовка
 def is_valid_title(title: str) -> bool:
-    return title != "" and len(title) <= 100
+    return title != "" and 20 <= len(title) <= 100
 
 
 # функция для проверки описания
 def is_valid_description(description: str) -> bool:
-    return description != "" and len(description) <= 1000
+    return description != "" and 60 <= len(description) <= 1000
 
 
 # функция для проверки никнейма
@@ -66,7 +66,7 @@ def validate_all(email, nickname, title, description):
     if not is_valid_email(email):
         error = "email не соответствует шаблону"
     elif not is_valid_nickname(nickname):
-        error = "никнейм должен состоять только из латинских символов/цифр и быть не длинее 16 символов"
+        error = "никнейм должен состоять только из латинских символов/цифр и быть от 3 до 16 символов"
     elif not is_valid_title(title):
         error = "некорректный заголовок, вы не можете использовать более 100 символов"
     elif not is_valid_description(description):
