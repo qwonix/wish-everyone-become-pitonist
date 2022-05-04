@@ -15,7 +15,7 @@ def is_valid_email(email: str) -> bool:
 
 
 def is_valid_title(title: str) -> bool:
-    return title != "" and len(title) <= 32
+    return title != "" and len(title) <= 40
 
 
 def is_valid_description(description: str) -> bool:
