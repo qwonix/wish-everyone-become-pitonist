@@ -1,3 +1,4 @@
+// настройки toastr
 toastr.options = {
     positionClass: "toast-top-center toast-top-full-width",
     preventDuplicates: true
@@ -7,6 +8,7 @@ function count_of_vals(number, max_chars, format) {
     return number + ' / ' + max_chars + ' ' + format[(max_chars % 100 > 4 && max_chars % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][Math.min(max_chars % 10, 5)]];
 }
 
+// отображение символов на клиенте
 $('#exampleInputNickname1').bind('input propertychange', function () {
     $('#labelExampleInputNickname1').text('Никнейм (' + count_of_vals(this.value.length, 16, ['символ', 'символа', 'символов']) + ' )')
 });

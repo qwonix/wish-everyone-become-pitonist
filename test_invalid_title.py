@@ -3,6 +3,7 @@ import myform
 
 list_title_uncor = [
     "",
+    "short title"
     "a" * 101,
 ]
 
