@@ -17,7 +17,7 @@
                 <input class="form-control" id="exampleInputTitle1" name="title" required>
 
                 <label id="labelExampleTextarea" for="exampleTextarea" class="form-label mt-4">Ваш текст</label>
-                <textarea class="form-control" id="exampleTextarea" rows="2" name="description" required></textarea>
+                <textarea class="form-control" id="exampleTextarea" rows="10" name="description" required></textarea>
             </fieldset>
             <br>
             <button type="submit" class="btn btn-primary">Опубликовать</button>
