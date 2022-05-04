@@ -92,10 +92,10 @@ def check_noveltie(data):
 
 @post('/novelties', method='post')
 def my_form1():
-    email = request.forms.get('email')
-    nickname = request.forms.get('nickname')
-    title = request.forms.get('title')
-    description = request.forms.get('description')
+    email = request.params.email
+    nickname = request.params.nickname
+    title = request.params.title
+    description = request.params.description
 
     ret = validate_all(email, nickname, title, description)
     if ret is not None:
