@@ -41,11 +41,9 @@
                     <b>Email: </b> {{ noveltie.email }},
                     <b>Опубликовано: </b> {{ noveltie.date }}
                 </p>
-                <p class="card-text">
                 %for s in noveltie.description.splitlines():
-                    <p>{{ s }}</p>
+                    <p class="card-text">{{ s }}</p>
                 %end
-                </p>
             </div>
         </div>
     </div>
