@@ -2,7 +2,7 @@
 
 <!-- Форма для добавления новинки -->
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <h5 class="card-title">Добавить новинку</h5>
         <form action="/novelties" method="post" onsubmit="return validate_all();">
             <fieldset class="form-group">
@@ -26,13 +26,12 @@
 </div>
 
 <br>
-<hr>
 <br>
 
 <div class="row g-3">
     %for noveltie in reversed(actual_novelties):
     <!-- Карточка для отображения новинки -->
-    <div class="col-md-12">
+    <div class="col-md-10">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">{{ noveltie.title }}</h5>
