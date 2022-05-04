@@ -12,7 +12,8 @@ from datetime import datetime
 # функция для проверки почты
 def is_valid_email(email: str) -> bool:
     email_pattern = regex_compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
-    return bool(email_pattern.match(email))
+    arr = email.split('@')
+    return bool(email_pattern.match(email)) and len(arr[0]) <= 64 and len(arr[1]) <= 255
 
 
 # функция для проверки заголовка
