@@ -10,13 +10,13 @@
                 <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                        placeholder="your-email@domain.com" name="email" required>
 
-                <label for="exampleInputNickname1" class="form-label mt-4">Никнейм</label>
+                <label id="labelExampleInputNickname1" for="exampleInputNickname1" class="form-label mt-4">Никнейм</label>
                 <input class="form-control" id="exampleInputNickname1" name="nickname" required>
 
-                <label for="exampleInputTitle1" class="form-label mt-4">Заголовок</label>
+                <label id="labelExampleInputTitle1" for="exampleInputTitle1" class="form-label mt-4">Заголовок</label>
                 <input class="form-control" id="exampleInputTitle1" name="title" required>
 
-                <label for="exampleTextarea" class="form-label mt-4">Ваш текст</label>
+                <label id="labelExampleTextarea" for="exampleTextarea" class="form-label mt-4">Ваш текст</label>
                 <textarea class="form-control" id="exampleTextarea" rows="2" name="description" required></textarea>
             </fieldset>
             <br>

@@ -3,6 +3,18 @@ toastr.options = {
     preventDuplicates: true
 };
 
+$('#exampleInputNickname1').bind('input propertychange', function () {
+    $('#labelExampleInputNickname1').text('Никнейм (' + this.value.length + ' символов)')
+});
+
+$('#exampleInputTitle1').bind('input propertychange', function () {
+    $('#labelExampleInputTitle1').text('Заголовок (' + this.value.length + ' символов)')
+});
+
+$('#exampleTextarea').bind('input propertychange', function () {
+    $('#labelExampleTextarea').text('Ваш текст (' + this.value.length + ' символов)')
+});
+
 function validate_all() {
     let email = $("#exampleInputEmail1").val();
     let nickname = $("#exampleInputNickname1").val();
