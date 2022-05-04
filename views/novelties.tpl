@@ -2,7 +2,7 @@
 
 <!-- Форма для добавления новинки -->
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <h5 class="card-title">Добавить новинку</h5>
         <form action="/novelties" method="post" onsubmit="return validate_all();">
             <fieldset class="form-group">
