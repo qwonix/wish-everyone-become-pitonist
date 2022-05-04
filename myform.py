@@ -79,10 +79,11 @@ def validate_all(email, nickname, title, description):
 
 
 # json api для проверки данных от клиента
-@route('/check_noveltie/data=:data')
-def check_noveltie(data):
+@route('/check_noveltie', method='post')
+def check_noveltie():
     from json import dumps as json_dumps, loads as json_loads
 
+    data = request.body.getvalue().decode('utf-8')
     data = json_loads(data)
 
     email = data['email']

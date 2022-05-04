@@ -12,8 +12,8 @@ function validate_all() {
     let arr = {'email': email, 'nickname': nickname, 'title': title, 'description': description}
 
     let request = new XMLHttpRequest();
-    request.open("GET", "check_noveltie/data=" + encodeURI(JSON.stringify(arr)), false);
-    request.send();
+    request.open("POST", "check_noveltie", false);
+    request.send(JSON.stringify(arr));
 
     if (request.status === 200) {
         let data = JSON.parse(request.responseText);
