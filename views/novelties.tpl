@@ -30,7 +30,7 @@
 <br>
 
 <div class="row g-3">
-    %for noveltie in actual_novelties:
+    %for noveltie in reversed(actual_novelties):
     <!-- Карточка для отображения новинки -->
     <div class="col-md-12">
         <div class="card">
