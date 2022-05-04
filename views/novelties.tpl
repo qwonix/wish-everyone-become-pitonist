@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title=title, menu=menu, year=year)
 
+<!-- Форма для добавления новинки -->
 <div class="row">
     <div class="col-md-4">
         <h5 class="card-title">Добавить новинку</h5>
@@ -30,6 +31,7 @@
 
 <div class="row g-3">
     %for noveltie in actual_novelties:
+    <!-- Карточка для отображения новинки -->
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">

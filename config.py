@@ -2,6 +2,7 @@ from os.path import exists as file_exists, join as path_join
 from json import dumps as json_dumps, load as json_loads
 
 
+# Класс для работы с key-value файлами json
 class Config:
     filename: str
     data: dict = {}

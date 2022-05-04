@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }} - WeatherApp</title>
-    <!-- Подключение bootstrap minty theme и иконок -->
+    <!-- Подключение bootstrap minty theme, иконок и toastr -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/static/css/toastr.min.css">
@@ -37,7 +37,7 @@
     </footer>
 </div>
 
-<!-- Подключение bootstrap bundle -->
+<!-- Подключение bootstrap bundle, jquery, toastr и checker.js -->
 <script src="/static/js/bootstrap.bundle.min.js"></script>
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/toastr.min.js"></script>

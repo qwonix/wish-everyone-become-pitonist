@@ -9,24 +9,29 @@ from datetime import datetime
 
 # import pdb
 
+# функция для проверки почты
 def is_valid_email(email: str) -> bool:
     email_pattern = regex_compile(r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+")
     return bool(email_pattern.match(email))
 
 
+# функция для проверки заголовка
 def is_valid_title(title: str) -> bool:
     return title != "" and len(title) <= 40
 
 
+# функция для проверки описания
 def is_valid_description(description: str) -> bool:
     return description != "" and len(description) <= 1000
 
 
+# функция для проверки никнейма
 def is_valid_nickname(nickname: str) -> bool:
     nickname_pattern = regex_compile(r"^\w{3,16}$")
     return bool(nickname_pattern.match(nickname))
 
 
+# обработчик post запроса на маршруте /home
 @post('/home', method='post')
 def my_form():
     email = request.forms.get('email')
@@ -54,6 +59,7 @@ def my_form():
         return f"Thanks! The answer will be sent to the mail {email}"
 
 
+# функция для проверки почты, никнейма, заголовка и описания перед публикацией
 def validate_all(email, nickname, title, description):
     error = ""
 
@@ -72,6 +78,7 @@ def validate_all(email, nickname, title, description):
     return None
 
 
+# json api для проверки данных от клиента
 @route('/check_noveltie/data=:data')
 def check_noveltie(data):
     from json import dumps as json_dumps, loads as json_loads
@@ -90,6 +97,7 @@ def check_noveltie(data):
     return json_dumps({'status': 'ok'})
 
 
+# обработчик post запроса на маршруте /novelties
 @post('/novelties', method='post')
 def my_form1():
     email = request.params.email
