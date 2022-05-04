@@ -159,6 +159,7 @@ def instruments():
     ))
 
 
+# Класс для отображения новинки
 class Noveltie:
     title: str
     description: str
@@ -173,6 +174,7 @@ class Noveltie:
         self.email = email
         self.date = date
 
+    # метод, который переводит класс в словарь
     def to_dict(self):
         return {
             'title': self.title,
@@ -182,11 +184,13 @@ class Noveltie:
             'date': self.date,
         }
 
+    # метод, который создает экземпляр класса из словаря
     @staticmethod
     def from_dict(d: dict):
         return Noveltie(d['title'], d['description'], d['nickname'], d['email'], d['date'])
 
 
+# обработчик get запроса на маршруте /novelties
 @route('/novelties')
 @view('novelties')
 def novelties():
