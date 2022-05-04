@@ -2,7 +2,7 @@ import unittest
 import myform
 
 list_mail_uncor = ["", "1", "m1@", "@mail",
-                   "mail@@", "mail@example.", "mail@example.c"]
+                   "mail@@", "mail@example.", "mail@example.c", "a" * 65 + "@" + 255 * "longwebsite" + ".com"]
 
 class Test_test_invalid_email(unittest.TestCase):
     def test_A(self):
