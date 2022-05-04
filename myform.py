@@ -68,9 +68,9 @@ def validate_all(email, nickname, title, description):
     elif not is_valid_nickname(nickname):
         error = "никнейм должен состоять только из латинских символов/цифр и быть от 3 до 16 символов"
     elif not is_valid_title(title):
-        error = "некорректный заголовок, вы не можете использовать более 100 символов"
+        error = "некорректный заголовок, вы не можете использовать от 20 до 100 символов"
     elif not is_valid_description(description):
-        error = "некорректный текст, вы не можете использовать более 1000 символов"
+        error = "некорректный текст, вы не можете использовать от 60 до 1000 символов"
 
     if error != "":
         return f"Ошибка: {error}"
