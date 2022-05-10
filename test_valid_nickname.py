@@ -1,6 +1,7 @@
 import unittest
 import myform
 
+# данный тест проверяет корректные никнеймы
 list_nickname_cor = ["qwe", "own2pwn", "pwned", "0xdeadbeef", "yay", "x_nickname_x"]
 
 class Test_test_nickname(unittest.TestCase):

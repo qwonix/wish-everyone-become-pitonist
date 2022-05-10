@@ -1,6 +1,7 @@
 import unittest
 import myform
 
+# данный тест проверяет корректные заголовки новинок
 list_title_cor = [
     "Locating KERNEL32 in ASLR memory",
     "MASM Unofficial Changelist",

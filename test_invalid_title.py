@@ -1,6 +1,7 @@
 import unittest
 import myform
 
+# данный тест проверяет некорректные заголовки новинок
 list_title_uncor = [
     "",
     "short title"

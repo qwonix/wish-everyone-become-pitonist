@@ -30,17 +30,18 @@ function validate_all() {
 
     let arr = {'email': email, 'nickname': nickname, 'title': title, 'description': description}
 
+    // отправка json посредством XMLHttpRequest на бекенд
     let request = new XMLHttpRequest();
     request.open("POST", "check_noveltie", false);
     request.send(JSON.stringify(arr));
 
+    // обработка данных с бекенда
     if (request.status === 200) {
         let data = JSON.parse(request.responseText);
-        console.log(data);
         if ('status' in data && data.status === 'ok') {
             return true;
         } else if ('error' in data) {
-            toastr.warning(data.error);
+            toastr.warning(data.error); // отображение ошибки в браузере
         }
     }
 
