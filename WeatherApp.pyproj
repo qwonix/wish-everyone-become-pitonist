@@ -40,7 +40,19 @@
     <Compile Include="test\test_F_mail.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\test_F_name.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_F_phone_num.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\test_T_mail.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_T_name.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_T_phone_num.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\__init__.py">

@@ -38,15 +38,24 @@
             <fieldset class="form-group">
                 <div>
                     <label class="form-label mt-3">Ваше имя</label>
-                    <input class="form-control" placeholder="Введите имя" name="name" required>
+                    <input class="form-control"
+                           pattern="^[А-Яа-яЁё]{3,}$"
+                           title="Используйте русский алфавит, минимум 3 символа"
+                           placeholder="Имя от 3 символов" name="name" required>
 
-                    <label class="form-label mt-4">Номер телефона</label>
-                    <input class="form-control" placeholder="Введите телефон" name="phone" required>
+                    <label class="form-label mt-4">Ваш номер телефона</label>
+                    <input class="form-control"
+                           pattern="^[+]7[ ][0-9]{3}[ ][0-9]{3}-[0-9]{2}-[0-9]{2}$"
+                           title="Формат телефона: +7 ххх ххх-хх-хх"
+                           placeholder="+7 ххх ххх-хх-хх"
+                           name="phone" required>
                 </div>
 
                 <label for="exampleTextarea" class="form-label mt-4">Ваш комментарий</label>
-                <textarea class="form-control" id="exampleTextarea" rows="5" name="text"
-                          placeholder="Комментарий" required></textarea>
+                <textarea class="form-control" id="exampleTextarea" rows="5"
+                          title="Используйте русский, латинский алфавит и цифры"
+                          name="text"
+                          placeholder="Текст комментария" required></textarea>
             </fieldset>
             <br>
             <button type="submit" class="btn btn-primary">Отправить</button>

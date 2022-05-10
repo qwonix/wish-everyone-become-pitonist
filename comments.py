@@ -1,26 +1,25 @@
-from bottle import route, view, post, request, redirect, template, static_file
-
+from bottle import route, view, post, request, redirect
 from datetime import datetime
 from routes import base_page, menu, WeatherForecast
-
+from re import compile as regex_compile
 from os.path import exists as file_exists, join as path_join, dirname
 from json import dumps as json_dumps, load as json_loads
 
 
-class Config:
-    filename: str
-    data: list = []
+def isCorrectPhone(phone: str):
+    pattern = regex_compile(r"^\+7\ \d{3}\ \d{3}-\d{2}-\d{2}$")
+    if pattern.match(phone):
+        return True
+    else:
+        return False
 
-    def __init__(self, working_directory: str, file: str):
-        filename = path_join(working_directory, file)
-        if not file_exists(filename):
-            open(filename, "w+").write(json_dumps([]))
 
-        self.filename = filename
-        self.data = json_loads(open(filename, "r+"))
-
-    def save(self):
-        open(self.filename, "w+").write(json_dumps(self.data, indent=4))
+def isCorrectName(name: str):
+    pattern = regex_compile(r"^[А-Яа-яЁё]{3,}$")
+    if pattern.match(name):
+        return True
+    else:
+        return False
 
 
 class Comment:
@@ -48,15 +47,23 @@ class Comment:
 
 @post('/comments', method='post')
 def my_form():
-    name = request.forms.get('name')
-    text = request.forms.get('text')
-    phone = request.forms.get('phone')
+    name = request.params.name
+    text = request.params.text
+    phone = request.params.phone
+
+    if not isCorrectPhone(phone) or not isCorrectName(name):
+        return
 
     comment = Comment(name, text, phone, datetime.now().strftime("%d %B, %Y %H:%M"))
 
-    config = Config(dirname(__file__), "json_comments.json")
-    config.data.append(comment.to_dict())
-    config.save()
+    full_filename = path_join(dirname(__file__), "comments.json")
+    if not file_exists(full_filename):
+        open(full_filename, "w+").write(json_dumps([]))
+
+    data = json_loads(open(full_filename, "r+"))
+
+    data.insert(0, comment.to_dict())
+    open(full_filename, "w+").write(json_dumps(data, indent=4))
 
     redirect('/comments')
 
@@ -64,10 +71,14 @@ def my_form():
 @route('/comments')
 @view('comments')
 def comments():
-    comments = []
+    full_filename = path_join(dirname(__file__), "comments.json")
+    if not file_exists(full_filename):
+        open(full_filename, "w+").write(json_dumps([]))
 
-    config = Config(dirname(__file__), "json_comments.json")
-    for c in config.data:
+    data = json_loads(open(full_filename, "r+"))
+
+    comments = []
+    for c in data:
         comments.append(Comment.from_dict(c))
 
     return base_page(dict(title='Прогноз погоды',

@@ -33,11 +33,11 @@ def my_form():
 
     # pdb.set_trace()
     questions = {}
-    if exists('json_question.json'):
-        with open('json_question.json', 'r', encoding='utf-8') as read_json:
+    if exists('question.json'):
+        with open('question.json', 'r', encoding='utf-8') as read_json:
             questions = json.load(read_json)
 
-    with open('json_question.json', 'w', encoding='utf-8') as write_json:
+    with open('question.json', 'w', encoding='utf-8') as write_json:
         if email in questions:
             questions.get(email).append(question)
         else:
