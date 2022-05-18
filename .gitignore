@@ -364,5 +364,6 @@ FodyWeavers.xsd
 
 # PyCharm
 .idea
+questions.json
 /WeatherApp1.pyperf
 /WeatherApp.pyperf

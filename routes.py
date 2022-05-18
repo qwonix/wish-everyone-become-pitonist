@@ -4,6 +4,9 @@ Routes and views for the bottle application.
 
 from bottle import route, view, post, request, template
 from datetime import datetime
+import myform
+from os.path import dirname
+import config2 as cfg2
 
 
 class MenuOption:

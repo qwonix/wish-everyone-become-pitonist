@@ -21,7 +21,7 @@
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
-    <UnitTestRootDirectory>./test/</UnitTestRootDirectory>
+    <UnitTestRootDirectory>./</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,12 +62,13 @@
   <ItemGroup>
     <Folder Include="test\" />
     <Folder Include="static\" />
-    <Folder Include="static\content\" />
+    <Folder Include="static\css\" />
     <Folder Include="static\fonts\" />
-    <Folder Include="static\scripts\" />
+    <Folder Include="static\js\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PythonSettings.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -95,6 +96,7 @@
     <Content Include="views\comments.tpl" />
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
+    <Content Include="views\instruments.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
